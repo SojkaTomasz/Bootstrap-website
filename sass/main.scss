@@ -1,0 +1,408 @@
+@use './colors' as *;
+@use './animations' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-padding-top: 82px;
+}
+
+body {
+	position: relative;
+	font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.line {
+	width: 80px;
+	height: 3px;
+	margin: 10px auto 30px;
+	background-color: $colorTomato;
+}
+
+.text-tomato {
+	color: $colorTomato;
+	font-weight: bold;
+}
+
+.nav-bg {
+	background-color: #141414;
+}
+
+.navbar {
+	width: 100%;
+	z-index: 1;
+	transition: background-color 0.5s;
+	.container {
+		.fa-icons {
+			margin-right: 3px;
+		}
+		a {
+			color: $colorWithe;
+		}
+		.active {
+			color: $colorTomato;
+		}
+		.nav-link:hover {
+			color: $colorTomato;
+		}
+		.fa-bars {
+			padding: 10px;
+			color: $colorWithe;
+			margin-right: 0;
+		}
+		.collapse {
+			text-transform: uppercase;
+		}
+	}
+	.navbar-toggler:focus {
+		box-shadow: none;
+	}
+}
+
+.home-img {
+	position: relative;
+	height: 100vh;
+	color: $colorWithe;
+	background-image: url(../img/home-1280.jpg);
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 0;
+	.home-bg {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.849);
+		z-index: -5;
+	}
+	.home-text {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding: 10px;
+		height: 100%;
+		z-index: 10;
+		.navbar-brand {
+			color: $colorWithe;
+			font-size: 40px;
+		}
+		h1 {
+			text-transform: uppercase;
+			font-size: 30px;
+		}
+		p {
+			font-size: 14px;
+		}
+		.btn {
+			background-color: $colorTomato;
+			border: none;
+		}
+		.btn:hover {
+			background-color: $colorWithe;
+		}
+	}
+	.fa-angles-down {
+		position: absolute;
+		font-size: 30px;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 10;
+		color: $colorWithe;
+	}
+}
+
+.aboutus {
+	.aboutus-title {
+		text-transform: uppercase;
+		font-size: 18px;
+	}
+	i {
+		font-size: 45px;
+		color: $colorTomato;
+	}
+	.aboutus-text {
+		font-size: 15px;
+	}
+}
+
+.portfolio {
+	background-color: $colorLight;
+	.carousel-item {
+		position: relative;
+		height: 600px;
+		img {
+			object-fit: cover;
+			height: 100%;
+		}
+		h5 {
+			text-transform: uppercase;
+		}
+	}
+	.carousel-caption {
+		position: absolute;
+		left: 0;
+		right: 0;
+		padding: 20px;
+		background-color: rgba(0, 0, 0, 0.801);
+	}
+	.carousel-indicators {
+		padding: 10px;
+	}
+	.card-group {
+		position: relative;
+		img {
+			height: 200px;
+			object-fit: cover;
+		}
+	}
+}
+
+.prices-section {
+	.prices {
+		justify-content: center;
+		.line-smale {
+			height: 2px;
+			width: 100%;
+			background-color: #ddd;
+		}
+		.prices-show {
+			margin: 5px;
+			box-shadow: 0 0 70px #ddd;
+			border: 1px solid #ddd;
+			border-radius: 30px;
+			h3 {
+				text-transform: uppercase;
+				color: $colorTomato;
+			}
+			span {
+				font-size: 20px;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+			i {
+				font-size: 30px;
+			}
+		}
+		.btn-top {
+			background-color: $colorTomato;
+			color: $colorWithe;
+		}
+		button {
+			border: none;
+			a {
+				color: $colorWithe;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+		}
+		button:hover {
+			background-color: $colorTomato;
+			border: none;
+			font-size: 15px;
+		}
+	}
+	.text-product {
+		font-size: 18px;
+		a {
+			color: $colorTomato;
+			text-decoration: none;
+		}
+	}
+}
+
+.teams {
+	background-color: $colorLight;
+	.card-group {
+		.card {
+			img {
+				height: 300px;
+				object-fit: cover;
+			}
+			.card-title {
+				text-transform: uppercase;
+				font-weight: bold;
+			}
+			.card-text-profession {
+				color: #a7a6a6;
+			}
+			.card-footer {
+				.fa-brands {
+					font-size: 18px;
+					padding: 15px;
+					cursor: pointer;
+					color: $colorTomato;
+				}
+				.fa-brands:hover {
+					color: $colorWithe;
+					background-color: $colorTomato;
+				}
+			}
+		}
+	}
+}
+
+.achievements {
+	background-color: #f7f6f6;
+	.fa-regular {
+		font-size: 40px;
+		color: $colorTomato;
+		margin-bottom: 8px;
+	}
+	.namber {
+		font-size: 20px;
+		font-weight: bold;
+	}
+}
+
+.contact {
+	position: relative;
+	background-image: url(../img/contact_1280.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	color: $colorWithe;
+	z-index: 0;
+	.contact-bg {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.87);
+		z-index: -1;
+	}
+	.logo {
+		font-size: 35px;
+	}
+	h4 {
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	.sm {
+		.fa-brands {
+			font-size: 20px;
+			padding: 10px;
+			color: $colorTomato;
+		}
+		.fa-brands:hover {
+			color: $colorWithe;
+			background-color: $colorTomato;
+		}
+	}
+	p {
+		font-size: 20px;
+	}
+	.sc-icon {
+		padding: 10px;
+	}
+}
+
+footer {
+	background-color: #141414;
+}
+
+@media (min-width: 375px) {
+	.home-img {
+		.home-text {
+			h1 {
+				font-size: 32px;
+			}
+			p {
+				font-size: 16px;
+			}
+		}
+	}
+	.portfolio {
+		.card-group {
+			img {
+				height: 300px;
+			}
+		}
+	}
+}
+
+@media (min-width: 450px) {
+	.contact {
+		.logo {
+			font-size: 52px;
+		}
+	}
+}
+
+@media (min-width: 500px) {
+	.contact {
+		.logo {
+			font-size: 60px;
+		}
+	}
+	.home-img {
+		.home-text {
+			.navbar-brand {
+				font-size: 60px;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.home-img {
+		.home-text {
+			h1 {
+				font-size: 42px;
+			}
+			p {
+				font-size: 20px;
+			}
+		}
+	}
+	.prices-section {
+		.text-product {
+			font-size: 16px;
+		}
+	}
+	.achievements {
+		.fa-regular {
+			font-size: 50px;
+		}
+		.namber {
+			font-size: 23px;
+		}
+	}
+	.contact {
+		.logo {
+			font-size: 65px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	html {
+		scroll-padding-top: 72px;
+	}
+	.home-img {
+		background-image: url(../img/home-1920.jpg);
+	}
+	.contact {
+		.logo {
+			font-size: 65px;
+		}
+	}
+	.contact {
+		background-image: url(../img/contact_1920.jpg);
+	}
+}
