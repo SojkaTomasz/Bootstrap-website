@@ -1,3 +1,3 @@
 # Bootstrap website
 
-http://bootstrap-website.sojkatomasz.com/
+https://bootstrap-website.sojkatomasz.com/
